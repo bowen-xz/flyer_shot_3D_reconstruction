@@ -32,28 +32,7 @@ def model_displacement(pdv0_path, pdv1_path, pdv2_path, pdv3_path):
                         [1, 1, 0]])
 
     # Define the triangles displayed vertex indices
-    triangles = [[0, 1, 3], [0, 2, 3]]
-
-    """
-    #loop for velocity graphs 3D animated
-    for i in range(min_rows):
-
-        if i % 10 == 0: 
-            #updating z value of verticies
-            vertices[0, 2] = df0.at[i, "velocity"]
-            vertices[1, 2] = df1.at[i, "velocity"]
-            vertices[2, 2] = df2.at[i, "velocity"]
-            vertices[3, 2] = df3.at[i, "velocity"]
-
-            #plotting
-            ax.cla()
-            ax.set_zlim(-500, 500)  # Fix z-axis limits
-            ax.plot_trisurf(vertices[:, 0], vertices[:, 1], vertices[:, 2], triangles=triangles, cmap='viridis')
-            plt.pause(0.1)
-            print(df0.at[i, "velocity"])
-        
-        print(i)
-    """    
+    triangles = [[0, 1, 3], [0, 2, 3]]   
 
     #loop for displacement graphs animated
     df0_pos = 0
